@@ -9,4 +9,7 @@ class Canvas
   field :customer_segments, :type => String
   field :cost_structure, :type => String
   field :revenue_streams, :type => String
+
+  attr_accessible :key_partnerships, :key_activities, :key_resources, :value_propositions, :customer_relationships, :channels, :customer_segments, :cost_structure, :revenue_streams
+
 end
