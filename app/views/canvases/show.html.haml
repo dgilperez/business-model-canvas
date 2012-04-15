@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Index:
+  = @canvas.index
+%p
+  %b New:
+  = @canvas.new
+%p
+  %b Create:
+  = @canvas.create
+%p
+  %b Edit:
+  = @canvas.edit
+%p
+  %b Update:
+  = @canvas.update
+%p
+  %b Destroy:
+  = @canvas.destroy
+%p
+  %b Show:
+  = @canvas.show
+
+= link_to 'Edit', edit_canvas_path(@canvas)
+\|
+= link_to 'Back', canvases_path

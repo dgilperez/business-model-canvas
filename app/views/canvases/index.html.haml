@@ -1,0 +1,36 @@
+%h1 Listing canvases
+
+%table
+  %tr
+    %th Key Partnerships
+    %th Key Activities
+    %th Key Resources
+    %th Value Propositions
+    %th Customer Relationships
+    %th Channels
+    %th Customer Segments
+    %th Cost Structure
+    %th Revenue Streams
+    %th
+    %th
+    %th
+
+  - @canvases.each do |canvas|
+    %tr
+      %td= canvas.key_partnerships
+      %td= canvas.key_activities
+      %td= canvas.key_resources
+      %td= canvas.value_propositions
+      %td= canvas.customer_relationships
+      %td= canvas.channels
+      %td= canvas.customer_segments
+      %td= canvas.cost_structure
+      %td= canvas.revenue_streams
+
+      %td= link_to 'Show', canvas
+      %td= link_to 'Edit', edit_canvas_path(canvas)
+      %td= link_to 'Destroy', canvas, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Canvas', new_canvas_path
