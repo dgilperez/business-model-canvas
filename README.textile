@@ -1,43 +1,58 @@
-h1. Business Model Canvas
+h1. Business Model Canvas App
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Small little app to create, store and share business model canvas amongst your BizDev pals.
 
-h2. More Information
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-h2. Required Gems
-
-This application requires this gem:
-
-* "rails":http://rubygems.org/gems/rails
+This is a quick personal experiment. Use it at your own risk.
 
 h2. Dependencies
 
-To use this application, you will need:
+Before running this app, you will need:
 
-* The Ruby language (version 1.8.7 or 1.9.2)
-* Rails (version 3.0.4 or newer)
+* The Ruby language (version 1.9.3)
+* Rails 3.2
+* A working installation of "MongoDB":http://www.mongodb.org/ (version 1.6.0 or newer)
+
+See "Installing Rails 3.2":http://railsapps.github.com/installing-rails.html for detailed instructions and advice.
+
+h4. Installing MongoDB
+
+If you don't have MongoDB installed on your computer, you'll need to install it and set it up to be always running on your computer (run at launch). On Mac OS X, the easiest way to install MongoDB is to install "Homebrew":http://mxcl.github.com/homebrew/ and then run the following:
+
+<pre>
+brew install mongodb
+</pre>
+
+
+
+h2. Obtaining API Keys
+
+Before installing the application, you may wish to contact the service provider you'll use to obtain any required API keys. The example assumes you will be using Twitter.
+
+h4. Twitter
+
+Visit "https://dev.twitter.com/apps/new":https://dev.twitter.com/apps/new to register your application. When you register your application, use the following values:
+
+|_. Application Website                    |_. Callback URL |_. Notes |
+| http://example.com | http://127.0.0.1:3000/ | http://localhost:3000/ doesn't work |
+
+h4. Facebook
+
+Visit "http://developers.facebook.com/setup":http://developers.facebook.com/setup to register your application.
+
+h4. GitHub
+
+Visit "https://github.com/account/applications/new":https://github.com/account/applications/new to register your application.
+
 
 h2. Installing the Application
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
 h2. Getting Started
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 h2. Documentation and Support
 
-This is the only documentation.
-
 h4. Issues
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
 h2. Similar Projects
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 h2. Contributing
 
@@ -52,8 +67,15 @@ If you add functionality to this application, create an alternative implementati
 
 h2. Credits
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Many thanks to Rails3 Mongoid Omniauth project for creating rails templates that rock.
+
+https://github.com/railsapps/rails3-mongoid-omniauth
 
 h2. License
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Public Domain Dedication
+
+This work is a compilation and derivation from other previously released works. With the exception of various included works, which may be restricted by other licenses, the author or authors of this code dedicate any and all copyright interest in this code to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this code under copyright law.
+
+
+
