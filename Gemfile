@@ -35,18 +35,18 @@ group :development, :test do
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-rspec", ">= 0.4.3"
 
-  case HOST_OS
-    when /darwin/i
-      gem 'rb-fsevent'
-      gem 'growl'
-    when /linux/i
-      gem 'libnotify'
-      gem 'rb-inotify'
-    when /mswin|windows/i
-      gem 'rb-fchange'
-      gem 'win32console'
-      gem 'rb-notifu'
-  end
+  # case HOST_OS
+  #   when /darwin/i
+  #     gem 'rb-fsevent'
+  #     gem 'growl'
+  #   when /linux/i
+  #     gem 'libnotify'
+  #     gem 'rb-inotify'
+  #   when /mswin|windows/i
+  #     gem 'rb-fchange'
+  #     gem 'win32console'
+  #     gem 'rb-notifu'
+  # end
 
 end
 
