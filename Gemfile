@@ -40,18 +40,18 @@ group :test do
   gem "email_spec", ">= 1.2.1"
 end
 
-case HOST_OS
-  when /darwin/i
-    gem 'rb-fsevent'
-    gem 'growl'
-  when /linux/i
-    gem 'libnotify'
-    gem 'rb-inotify'
-  when /mswin|windows/i
-    gem 'rb-fchange'
-    gem 'win32console'
-    gem 'rb-notifu'
-end
+# case HOST_OS
+#   when /darwin/i
+#     gem 'rb-fsevent'
+#     gem 'growl'
+#   when /linux/i
+#     gem 'libnotify'
+#     gem 'rb-inotify'
+#   when /mswin|windows/i
+#     gem 'rb-fchange'
+#     gem 'win32console'
+#     gem 'rb-notifu'
+# end
 
 gem "bson_ext", ">= 1.6.2"
 gem "mongoid", ">= 2.4.8"
