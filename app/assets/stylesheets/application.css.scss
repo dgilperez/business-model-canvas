@@ -13,12 +13,15 @@
 
 @import "bourbon";
 @import "bootstrap_and_overrides";
+@import "font-awesome";
 @import "canvases";
 @import "home";
 @import "users";
 
+@import url(http://fonts.googleapis.com/css?family=Averia+Libre);
+
 #main {
-  margin-top: 26px;
+  margin-top: 35px;
 }
 
 .content {
@@ -31,6 +34,8 @@
 
 .masthead {
   background: purple;
+  font-family: 'Averia Libre', cursive, Georgia;
+  padding: 0.7em 0;
 
   h1 {
     color: white;

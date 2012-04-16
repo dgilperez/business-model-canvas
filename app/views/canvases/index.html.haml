@@ -1,9 +1,6 @@
-%h1 Listing canvases
-
-%table.table.table-stripped
+%table.table.table-stripped.lead
   %tr
-    %th Name
-    %th Author
+    %th Your saved Canvases
     %th
     %th
     %th
@@ -11,7 +8,6 @@
   - @canvases.each do |canvas|
     %tr
       %td= canvas.name
-      %td= canvas.user.name
 
       %td= link_to 'Show', canvas
       %td= link_to 'Edit', edit_canvas_path(canvas)
@@ -19,4 +15,4 @@
 
 %br
 
-= link_to 'New Canvas', new_canvas_path
+= link_to 'New Canvas', new_canvas_path, :class => 'btn btn-large btn-primary'

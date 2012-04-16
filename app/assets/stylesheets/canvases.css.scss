@@ -6,8 +6,17 @@
   width: 100%;
 }
 
-.form-actions input[type="submit"] {
-  margin-right: 3em;
+.form-actions {
+  margin-bottom: 0;
+  margin-top: 0;
+
+  input[type="text"] {
+    width: auto;
+  }
+
+  input[type="submit"] {
+    margin-right: 3em;
+  }
 }
 
 .row-fluid.div.upper {

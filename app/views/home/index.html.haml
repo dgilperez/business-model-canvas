@@ -1,5 +1,12 @@
 .hero-unit
-  %h1 You need a Business Model Canvas
+  %h1 You think Business
   %p You play with this app
   %p
-    = link_to 'Create your first Canvas »', new_canvas_path, :class => 'btn btn-primary btn-large'
+    - if user_signed_in?
+      = link_to 'Create your first Canvas »', new_canvas_path, :class => 'btn btn-primary btn-large'
+      or
+      = link_to "go to your saved Canvases", canvases_path
+    - else
+      = link_to 'Sign in with Twitter', signin_path, :class => 'btn btn-primary btn-large'
+
+

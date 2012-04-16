@@ -11,7 +11,7 @@ class Canvas
   field :revenue
   field :name
 
-  attr_accessible :partnerships, :activities, :resources, :propositions, :relationships, :channels, :segments, :cost, :revenue
+  attr_accessible :partnerships, :activities, :resources, :propositions, :relationships, :channels, :segments, :cost, :revenue, :name
 
   belongs_to :user
 

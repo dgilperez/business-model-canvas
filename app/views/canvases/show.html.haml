@@ -1,5 +1,9 @@
 %p#notice= notice
 
+%p.lead
+  %b Name:
+  = @canvas.name
+
 %p
   %b Key Partnerships:
   = @canvas.partnerships
@@ -28,6 +32,5 @@
   %b Revenue Streams:
   = @canvas.revenue
 
-= link_to 'Edit', edit_canvas_path(@canvas)
-\|
-= link_to 'Back', canvases_path
+= link_to 'Edit canvas', edit_canvas_path(@canvas), :class => 'btn btn-large btn-primary'
+= link_to 'See all your canvases', canvases_path, :class => 'btn btn-large btn-success'

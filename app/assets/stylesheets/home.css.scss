@@ -1,3 +1,12 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+
+.hero-unit {
+  h1 {
+    font-family: 'Fredericka the Great', cursive;
+    //font-family: 'Rock Salt', cursive;
+    font-weight: normal;
+    font-size: 9em;
+    margin-bottom: 40px;
+  }
+}

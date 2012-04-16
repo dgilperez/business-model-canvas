@@ -1,6 +1,8 @@
 class CanvasesController < ApplicationController
   layout 'canvas', :only => [:new, :edit]
 
+  before_filter :authenticate_user!
+
   # GET /canvases
   # GET /canvases.json
   def index
