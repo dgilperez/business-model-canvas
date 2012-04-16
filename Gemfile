@@ -2,6 +2,8 @@ require 'rbconfig'
 HOST_OS = RbConfig::CONFIG['host_os']
 source 'https://rubygems.org'
 
+gem 'thin'
+
 gem 'rails', '3.2.3'
 
 group :assets do
@@ -32,6 +34,20 @@ group :development, :test do
   gem "guard-rails", ">= 0.0.3"
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-rspec", ">= 0.4.3"
+
+  case HOST_OS
+    when /darwin/i
+      gem 'rb-fsevent'
+      gem 'growl'
+    when /linux/i
+      gem 'libnotify'
+      gem 'rb-inotify'
+    when /mswin|windows/i
+      gem 'rb-fchange'
+      gem 'win32console'
+      gem 'rb-notifu'
+  end
+
 end
 
 group :test do
@@ -39,19 +55,6 @@ group :test do
   gem "mongoid-rspec", ">= 1.4.4"
   gem "email_spec", ">= 1.2.1"
 end
-
-# case HOST_OS
-#   when /darwin/i
-#     gem 'rb-fsevent'
-#     gem 'growl'
-#   when /linux/i
-#     gem 'libnotify'
-#     gem 'rb-inotify'
-#   when /mswin|windows/i
-#     gem 'rb-fchange'
-#     gem 'win32console'
-#     gem 'rb-notifu'
-# end
 
 gem "bson_ext", ">= 1.6.2"
 gem "mongoid", ">= 2.4.8"
