@@ -1,3 +1,129 @@
-// Place all the styles related to the canvases controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.canvas {
+  height: 630px;
+}
+
+.row-fluid {
+  width: 100%;
+}
+
+.form-actions input[type="submit"] {
+  margin-right: 3em;
+}
+
+.row-fluid.div.upper {
+  height: 60%;
+  margin-bottom: 0;
+
+  .half-vertical {
+    height: 50%;
+    padding-bottom: 2px;
+
+  }
+}
+
+.row-fluid.div.lower {
+  height: 35%;
+}
+
+.canvas .row-fluid > .span2 {
+  width: 16%;
+}
+
+.canvas .row-fluid > .span3 {
+  width: 20.0%;
+}
+
+.canvas .row-fluid > .span6 {
+  width: 46%;
+}
+
+.canvas .row-fluid > [class*="span"] {
+  float: left;
+  margin-left: 0%;
+  padding-left: 24px;
+}
+
+.canvas div.row-fluid > div {
+  position: relative;
+
+  div.box {
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      font-weight: bold;
+      color: #666;
+    }
+
+    textarea {
+      border: 2px #CCC solid;
+
+      height: 100%;
+      width: 100%;
+
+      padding: 8px;
+      padding-top: 40px;
+
+      margin-bottom: 2px;
+
+      resize: none;
+
+      @include box-shadow;
+      @include border-radius(3px);
+    }
+
+    div.icon {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 32px;
+      height: 32px;
+      z-index: 10;
+      background-repeat: no-repeat;
+      background-position: center center;
+      @include opacity(0.2);
+    }
+  }
+
+  div.box#partnership div.icon {
+    background-image: image-url('partnership.png');
+  }
+
+  div.box#activities div.icon {
+    background-image: image-url('activities.png');
+  }
+
+  div.box#resources div.icon {
+    background-image: image-url('resources.png');
+  }
+
+  div.box#propositions div.icon {
+    background-image: image-url('propositions.png');
+  }
+
+  div.box#relationship div.icon {
+    background-image: image-url('relationship.png');
+  }
+
+  div.box#channels div.icon {
+    background-image: image-url('channels.png');
+  }
+
+  div.box#segments div.icon {
+    background-image: image-url('segments.png');
+  }
+
+  div.box#cost div.icon {
+    background-image: image-url('cost.png');
+  }
+
+  div.box#revenue div.icon {
+    background-image: image-url('revenue.png');
+  }
+}
+
+.canvas div.row-fluid > div > div {
+  margin: 0 1px;
+}

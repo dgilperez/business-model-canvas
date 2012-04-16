@@ -1,17 +1,44 @@
-= simple_form_for(@canvas) do |f|
+= simple_form_for(@canvas, :html => {:class => 'canvas'}) do |f|
   = f.error_notification
 
-  .form-inputs
-
-    = f.input :key_partnerships
-    = f.input :key_activities
-    = f.input :key_resources
-    = f.input :value_propositions
-    = f.input :customer_relationships
-    = f.input :channels
-    = f.input :customer_segments
-    = f.input :cost_structure
-    = f.input :revenue_streams
-
   .form-actions
-    = f.button :submit
+    = f.button :submit, :class => 'btn btn-primary btn-large pull-right'
+
+  .row-fluid.upper
+    .span2
+      #partnership.full-vertical.box
+        .icon
+        = f.input :partnerships, :as => :text, :input_html => { :cols => '40', :rows => "20" }
+    .span3
+      #activities.half-vertical.box
+        .icon
+        = f.input :activities, :as => :text, :input_html => { :cols => '40', :rows => "8" }
+      #resources.half-vertical.box
+        .icon
+        = f.input :resources, :as => :text, :input_html => { :cols => '40', :rows => "9" }
+    .span2
+      #propositions.full-vertical.box
+        .icon
+        = f.input :propositions, :as => :text, :input_html => { :cols => '40', :rows => "20" }
+    .span3
+      #relationship.half-vertical.box
+        .icon
+        = f.input :relationships, :as => :text, :input_html => { :cols => '40', :rows => "8" }
+      #channels.half-vertical.box
+        .icon
+        = f.input :channels, :as => :text, :input_html => { :cols => '40', :rows => "9" }
+    .span2
+      #segments.full-vertical.box
+        .icon
+        = f.input :segments, :as => :text, :input_html => { :cols => '40', :rows => "20" }
+
+  .row-fluid.lower
+    .span6
+      #cost.box
+        .icon
+        = f.input :cost, :as => :text, :input_html => { :cols => '40', :rows => "9" }
+    .span6
+      #streams.box
+        .icon
+        = f.input :revenue, :as => :text, :input_html => { :cols => '40', :rows => "9" }
+

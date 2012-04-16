@@ -17,15 +17,15 @@
 
   - @canvases.each do |canvas|
     %tr
-      %td= canvas.key_partnerships
-      %td= canvas.key_activities
-      %td= canvas.key_resources
-      %td= canvas.value_propositions
-      %td= canvas.customer_relationships
+      %td= canvas.partnerships
+      %td= canvas.activities
+      %td= canvas.resources
+      %td= canvas.propositions
+      %td= canvas.relationships
       %td= canvas.channels
-      %td= canvas.customer_segments
-      %td= canvas.cost_structure
-      %td= canvas.revenue_streams
+      %td= canvas.segments
+      %td= canvas.cost
+      %td= canvas.revenue
 
       %td= link_to 'Show', canvas
       %td= link_to 'Edit', edit_canvas_path(canvas)

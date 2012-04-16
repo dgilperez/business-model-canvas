@@ -1,4 +1,6 @@
 class CanvasesController < ApplicationController
+  layout 'canvas', :only => [:new, :edit]
+
   # GET /canvases
   # GET /canvases.json
   def index
