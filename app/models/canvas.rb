@@ -1,15 +1,18 @@
 class Canvas
   include Mongoid::Document
-  field :partnerships,  :type => String
-  field :activities,    :type => String
-  field :resources,     :type => String
-  field :propositions,  :type => String
-  field :relationships, :type => String
-  field :channels,      :type => String
-  field :segments,      :type => String
-  field :cost,          :type => String
-  field :revenue,       :type => String
+  field :partnerships
+  field :activities
+  field :resources
+  field :propositions
+  field :relationships
+  field :channels
+  field :segments
+  field :cost
+  field :revenue
+  field :name
 
   attr_accessible :partnerships, :activities, :resources, :propositions, :relationships, :channels, :segments, :cost, :revenue
+
+  belongs_to :user
 
 end

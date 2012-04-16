@@ -4,7 +4,7 @@ class CanvasesController < ApplicationController
   # GET /canvases
   # GET /canvases.json
   def index
-    @canvases = Canvas.all
+    @canvases = current_user.canvases.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,7 +26,7 @@ class CanvasesController < ApplicationController
   # GET /canvases/new
   # GET /canvases/new.json
   def new
-    @canvas = Canvas.new
+    @canvas = current_user.canvases.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +36,13 @@ class CanvasesController < ApplicationController
 
   # GET /canvases/1/edit
   def edit
-    @canvas = Canvas.find(params[:id])
+    @canvas = current_user.canvases.find(params[:id])
   end
 
   # POST /canvases
   # POST /canvases.json
   def create
-    @canvas = Canvas.new(params[:canvas])
+    @canvas = current_user.canvases.new(params[:canvas])
 
     respond_to do |format|
       if @canvas.save
@@ -58,7 +58,7 @@ class CanvasesController < ApplicationController
   # PUT /canvases/1
   # PUT /canvases/1.json
   def update
-    @canvas = Canvas.find(params[:id])
+    @canvas = current_user.canvases.find(params[:id])
 
     respond_to do |format|
       if @canvas.update_attributes(params[:canvas])
@@ -74,7 +74,7 @@ class CanvasesController < ApplicationController
   # DELETE /canvases/1
   # DELETE /canvases/1.json
   def destroy
-    @canvas = Canvas.find(params[:id])
+    @canvas = current_user.canvases.find(params[:id])
     @canvas.destroy
 
     respond_to do |format|

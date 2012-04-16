@@ -1,31 +1,17 @@
 %h1 Listing canvases
 
-%table
+%table.table.table-stripped
   %tr
-    %th Key Partnerships
-    %th Key Activities
-    %th Key Resources
-    %th Value Propositions
-    %th Customer Relationships
-    %th Channels
-    %th Customer Segments
-    %th Cost Structure
-    %th Revenue Streams
+    %th Name
+    %th Author
     %th
     %th
     %th
 
   - @canvases.each do |canvas|
     %tr
-      %td= canvas.partnerships
-      %td= canvas.activities
-      %td= canvas.resources
-      %td= canvas.propositions
-      %td= canvas.relationships
-      %td= canvas.channels
-      %td= canvas.segments
-      %td= canvas.cost
-      %td= canvas.revenue
+      %td= canvas.name
+      %td= canvas.user.name
 
       %td= link_to 'Show', canvas
       %td= link_to 'Edit', edit_canvas_path(canvas)

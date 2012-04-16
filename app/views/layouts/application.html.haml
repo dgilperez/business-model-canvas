@@ -20,11 +20,12 @@
         .container
           %h1 Create, store, rework and share your own Business Models Canvas
     #main{:role => "main"}
-      - flash.each do |name, msg|
-        %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
-          %a.close{"data-dismiss" => "alert"} ×
-          = msg
       .container
+        - flash.each do |name, msg|
+          %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+            %a.close{"data-dismiss" => "alert"} ×
+            = msg
+
         .content
           .row
             .span12
