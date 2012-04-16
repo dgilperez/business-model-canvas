@@ -1,13 +1,13 @@
 class SessionsController < ApplicationController
 
   def new
-    redirect_to '/auth/twitter'
+    redirect_to auth_path
   end
 
 
   def create
     auth = request.env["omniauth.auth"]
-    user = User.where(:provider => auth['provider'], 
+    user = User.where(:provider => auth['provider'],
                       :uid => auth['uid']).first || User.create_with_omniauth(auth)
     session[:user_id] = user.id
     if !user.email
@@ -25,6 +25,12 @@ class SessionsController < ApplicationController
 
   def failure
     redirect_to root_url, :alert => "Authentication error: #{params[:message].humanize}"
+  end
+
+  private
+
+  def auth_path
+    '/auth/twitter'
   end
 
 end
