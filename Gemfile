@@ -14,7 +14,7 @@ group :assets do
 
   gem 'bourbon'
 
-  gem 'font-awesome-sass-rails'
+  #gem 'font-awesome-sass-rails'
 end
 
 gem 'jquery-rails'
