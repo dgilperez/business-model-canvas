@@ -32,5 +32,6 @@
   %b Revenue Streams:
   = @canvas.revenue
 
-= link_to 'Edit canvas', edit_canvas_path(@canvas), :class => 'btn btn-large btn-primary'
-= link_to 'See all your canvases', canvases_path, :class => 'btn btn-large btn-success'
+- if current_user
+  = link_to 'Edit canvas', edit_canvas_path(@canvas), :class => 'btn btn-large btn-primary'
+  = link_to 'See all your canvases', canvases_path, :class => 'btn btn-large btn-success'

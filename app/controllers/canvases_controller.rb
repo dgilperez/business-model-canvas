@@ -1,7 +1,7 @@
 class CanvasesController < ApplicationController
   layout 'canvas', :only => [:new, :edit]
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :only => [:index, :new, :create, :edit, :update, :destroy]
 
   # GET /canvases
   # GET /canvases.json

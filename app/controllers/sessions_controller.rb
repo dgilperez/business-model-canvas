@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
     redirect_to auth_path
   end
 
-
   def create
     auth = request.env["omniauth.auth"]
     user = User.where(:provider => auth['provider'],
@@ -15,7 +14,6 @@ class SessionsController < ApplicationController
     else
       redirect_to root_url, :notice => 'Signed in!'
     end
-
   end
 
   def destroy
