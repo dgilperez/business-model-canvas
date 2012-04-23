@@ -1,37 +1,51 @@
 %p#notice= notice
 
-%p.lead
-  %b Name:
-  = @canvas.name
+= simple_form_for(@canvas, :html => {:class => 'canvas'}) do |f|
+  = f.error_notification
 
-%p
-  %b Key Partnerships:
-  = @canvas.partnerships
-%p
-  %b Key Activities:
-  = @canvas.activities
-%p
-  %b Key Resources:
-  = @canvas.resources
-%p
-  %b Value Propositions:
-  = @canvas.propositions
-%p
-  %b Customer Relationships:
-  = @canvas.relationships
-%p
-  %b Channels:
-  = @canvas.channels
-%p
-  %b Customer Segments:
-  = @canvas.segments
-%p
-  %b Cost Structure:
-  = @canvas.cost
-%p
-  %b Revenue Streams:
-  = @canvas.revenue
+  .form-actions
+    %p.lead.pull-right
+      %b Author:
+      = @canvas.user.name
 
-- if current_user
-  = link_to 'Edit canvas', edit_canvas_path(@canvas), :class => 'btn btn-large btn-primary'
-  = link_to 'See all your canvases', canvases_path, :class => 'btn btn-large btn-success'
+    %p.lead.pull-left
+      %b Name:
+      = @canvas.name
+
+  .row-fluid.upper
+    .span2
+      #partnership.full-vertical.box
+        .icon
+        = f.input :partnerships, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "20" }
+    .span3
+      #activities.half-vertical.box
+        .icon
+        = f.input :activities, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "8" }
+      #resources.half-vertical.box
+        .icon
+        = f.input :resources, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "9" }
+    .span2
+      #propositions.full-vertical.box
+        .icon
+        = f.input :propositions, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "20" }
+    .span3
+      #relationship.half-vertical.box
+        .icon
+        = f.input :relationships, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "8" }
+      #channels.half-vertical.box
+        .icon
+        = f.input :channels, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "9" }
+    .span2
+      #segments.full-vertical.box
+        .icon
+        = f.input :segments, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "20" }
+
+  .row-fluid.lower
+    .span6
+      #cost.box
+        .icon
+        = f.input :cost, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "9" }
+    .span6
+      #revenue.box
+        .icon
+        = f.input :revenue, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "9" }
