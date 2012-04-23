@@ -49,3 +49,11 @@
       #revenue.box
         .icon
         = f.input :revenue, :disabled => true, :as => :text, :input_html => { :cols => '40', :rows => "9" }
+%br
+%br
+
+- if current_user
+  .form-actions
+    - if @canvas.user == current_user
+      = link_to 'Edit canvas', edit_canvas_path(@canvas), :class => 'btn btn-large btn-primary'
+    = link_to 'See all your canvases', canvases_path, :class => 'btn btn-large btn-success'
