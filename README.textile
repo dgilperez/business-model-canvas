@@ -1,4 +1,4 @@
-h1. Business Model Canvas App
+h1. Business Model Canvas App "!https://codeclimate.com/github/dgilperez/business-model-canvas.png!":https://codeclimate.com/github/dgilperez/business-model-canvas
 
 Small little app to create, store and share business model canvas amongst your BizDev pals.
 
