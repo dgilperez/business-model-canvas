@@ -38,7 +38,7 @@ class CanvasesController < ApplicationController
 
   # GET /canvases/1/edit
   def edit
-    @canvas = current_user.canvases.find(params[:id])
+    @canvas = Canvas.find(params[:id])
   end
 
   # POST /canvases
@@ -60,7 +60,7 @@ class CanvasesController < ApplicationController
   # PUT /canvases/1
   # PUT /canvases/1.json
   def update
-    @canvas = current_user.canvases.find(params[:id])
+    @canvas = Canvas.find(params[:id])
 
     respond_to do |format|
       if @canvas.update_attributes(params[:canvas])
