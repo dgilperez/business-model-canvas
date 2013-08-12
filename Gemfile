@@ -59,8 +59,9 @@ end
 gem "bson_ext", ">= 1.6.2"
 gem "mongoid", ">= 2.4.8"
 
-gem "omniauth", ">= 1.0.3"
-gem "omniauth-twitter"
+gem "omniauth", ">= 1.1.4"
+gem "omniauth-twitter", '1.0.0'
+gem 'multi_json', '1.7.9'
 
 gem "bootstrap-sass", ">= 2.0.1"
 gem "simple_form"

@@ -75,3 +75,4 @@ db/*.sqlite3
 **.swp
 
 .rvmrc
+bin/
