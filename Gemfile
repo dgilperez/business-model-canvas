@@ -1,3 +1,5 @@
+ruby '2.2.4'
+
 require 'rbconfig'
 HOST_OS = RbConfig::CONFIG['host_os']
 source 'https://rubygems.org'
